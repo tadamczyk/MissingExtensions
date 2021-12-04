@@ -31,5 +31,5 @@ public static partial class Extensions
 	/// <param name="source">The sequence of elements.</param>
 	/// <returns>True if the sequence is null or is empty, false if not.</returns>
 	public static bool IsNullOrEmpty<T>(this IEnumerable<T> source) =>
-		source == null || !source.Any();
+		source is null || !source.Any();
 }
