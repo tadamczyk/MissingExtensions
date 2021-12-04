@@ -6,7 +6,7 @@ do
     cd src/$dir
     echo "Packing NuGet package: ${dir##*/}"
     dotnet pack -c release /p:PackageVersion=0.1.$GITHUB_RUN_NUMBER --no-restore -o .
-    cd -
+    cd ../../
 done
 
 echo "Finished packing NuGet packages."
