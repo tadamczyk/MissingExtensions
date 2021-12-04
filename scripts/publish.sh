@@ -5,6 +5,7 @@ do
     dir=${dir%*/}
     cd $dir
     echo "Publishing NuGet package: ${dir##*/}"
+    ls
     dotnet nuget push *.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
     cd ../
 done
