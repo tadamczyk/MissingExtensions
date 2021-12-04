@@ -6,11 +6,11 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <TargetFramework>Net6.0</TargetFramework>
-        <AssemblyName>MissingExceptions.Collections</AssemblyName>
-        <Description>MissingExceptions.Collections</Description>
-        <PackageId>MissingExceptions.Collections</PackageId>
-        <PackageTags>MissingExceptions.Collections</PackageTags>
-        <Title>MissingExceptions.Collections</Title>
+        <AssemblyName>MissingExtensions.Collections</AssemblyName>
+        <Description>MissingExtensions.Collections</Description>
+        <PackageId>MissingExtensions.Collections</PackageId>
+        <PackageTags>MissingExtensions.Collections</PackageTags>
+        <Title>MissingExtensions.Collections</Title>
     </PropertyGroup>
     <ItemGroup>
         <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
