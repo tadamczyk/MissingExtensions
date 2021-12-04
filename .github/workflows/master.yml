@@ -18,7 +18,7 @@ jobs:
       - name: Test
         run: dotnet test --no-restore
   pack-and-publish:
-    needs: test
+    needs: build-and-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
