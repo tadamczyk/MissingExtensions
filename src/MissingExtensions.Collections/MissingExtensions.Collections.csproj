@@ -3,7 +3,6 @@
         <Authors>tadamczyk</Authors>
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <TargetFramework>Net6.0</TargetFramework>
