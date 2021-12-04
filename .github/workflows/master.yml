@@ -3,7 +3,7 @@ on:
   push:
     branches: [ master ]
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,20 +15,9 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.x
-      - name: Restore
-        run: dotnet restore
       - name: Test
         run: dotnet test --no-restore
-  pack:
+  pack-and-publish:
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -44,15 +33,6 @@ jobs:
           chmod +x ./scripts/pack.sh
           ./scripts/pack.sh
         shell: bash
-  publish:
-    needs: pack
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.x
       - name: Publish
         run: |
           chmod +x ./scripts/publish.sh
