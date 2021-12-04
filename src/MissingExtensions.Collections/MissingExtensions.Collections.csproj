@@ -3,6 +3,7 @@
         <Authors>tadamczyk</Authors>
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <TargetFramework>Net6.0</TargetFramework>
         <AssemblyName>MissingExceptions.Collections</AssemblyName>
         <Description>MissingExceptions.Collections</Description>
