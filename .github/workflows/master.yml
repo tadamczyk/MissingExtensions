@@ -1,0 +1,38 @@
+name: Master
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: dotnet test --no-restore
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack
+        run: |
+          chmod +x ./scripts/pack.sh
+          ./scripts/pack.sh
+        shell: bash
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish
+        run: |
+          chmod +x ./scripts/publish.sh
+          ./scripts/publish.sh
+        shell: bash

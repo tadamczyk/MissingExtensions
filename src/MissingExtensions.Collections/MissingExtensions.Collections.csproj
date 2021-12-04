@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Authors>tadamczyk</Authors>
+        <ImplicitUsings>Enable</ImplicitUsings>
+        <LangVersion>Latest</LangVersion>
+        <TargetFramework>Net6.0</TargetFramework>
+        <AssemblyName>MissingExceptions.Collections</AssemblyName>
+        <Description>MissingExceptions.Collections</Description>
+        <PackageId>MissingExceptions.Collections</PackageId>
+        <PackageTags>MissingExceptions.Collections</PackageTags>
+        <Title>MissingExceptions.Collections</Title>
+    </PropertyGroup>
+</Project>
