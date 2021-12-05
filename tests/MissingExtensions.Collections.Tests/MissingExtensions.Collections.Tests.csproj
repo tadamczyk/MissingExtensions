@@ -3,8 +3,8 @@
         <Authors>tadamczyk</Authors>
         <ImplicitUsings>Enable</ImplicitUsings>
         <IsPackable>False</IsPackable>
-        <Nullable>Enable</Nullable>
         <LangVersion>Latest</LangVersion>
+        <Nullable>Enable</Nullable>
         <TargetFramework>Net6.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>

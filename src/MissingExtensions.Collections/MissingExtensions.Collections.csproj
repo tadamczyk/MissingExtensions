@@ -1,15 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
+        <AssemblyName>MissingExtensions.Collections</AssemblyName>
         <Authors>tadamczyk</Authors>
+        <Description>MissingExtensions.Collections</Description>
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <TargetFramework>Net6.0</TargetFramework>
-        <AssemblyName>MissingExtensions.Collections</AssemblyName>
-        <Description>MissingExtensions.Collections</Description>
         <PackageId>MissingExtensions.Collections</PackageId>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/tadamczyk/MissingExtensions</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>MissingExtensions.Collections</PackageTags>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/tadamczyk/MissingExtensions</RepositoryUrl>
+        <TargetFramework>Net6.0</TargetFramework>
         <Title>MissingExtensions.Collections</Title>
     </PropertyGroup>
     <ItemGroup>
