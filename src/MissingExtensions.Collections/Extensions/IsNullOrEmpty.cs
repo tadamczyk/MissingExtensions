@@ -22,6 +22,8 @@
 // SOFTWARE.
 #endregion
 
+namespace MissingExtensions.Collections;
+
 public static partial class Extensions
 {
 	/// <summary>
