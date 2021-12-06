@@ -25,44 +25,57 @@
 namespace MissingExtensions.Collections.Tests;
 
 [TestFixture]
-public class IsNullOrEmptyTests
+public class ForEachTests
 {
 	[Test]
-	public void Should_Be_True_When_Sequence_Is_Null()
+	public void Should_Throw_NullReferenceException_When_Sequence_Is_Null()
 	{
 		// Arrange
 		IEnumerable<object>? source = null;
 
-		// Act
-		bool result = source.IsNullOrEmpty();
-
-		// Assert
-		Assert.IsTrue(result);
+		// Act & Assert
+		Assert.Throws<NullReferenceException>(() => source.ForEach(_ => { }));
 	}
 
 	[Test]
-	public void Should_Be_True_When_Sequence_Is_Empty()
+	public void Should_Iterate_Zero_Times_When_Sequence_Is_Empty()
 	{
 		// Arrange
 		IEnumerable<object> source = Array.Empty<object>();
+		int iterator = 0;
 
 		// Act
-		bool result = source.IsNullOrEmpty();
+		source.ForEach(_ => iterator++);
 
 		// Assert
-		Assert.IsTrue(result);
+		Assert.AreEqual(source.Count(), iterator);
 	}
 
 	[Test]
-	public void Should_Be_False_When_Sequence_Is_Not_Empty()
+	public void Should_Iterate_One_Time_When_Sequence_Has_One_Element()
 	{
 		// Arrange
 		IEnumerable<object> source = new[] {"0"};
+		int iterator = 0;
 
 		// Act
-		bool result = source.IsNullOrEmpty();
+		source.ForEach(_ => iterator++);
 
 		// Assert
-		Assert.IsFalse(result);
+		Assert.AreEqual(source.Count(), iterator);
+	}
+
+	[Test]
+	public void Should_Iterate_Multiple_Times_When_Sequence_Has_Multiple_Elements()
+	{
+		// Arrange
+		IEnumerable<object> source = new[] {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+		int iterator = 0;
+
+		// Act
+		source.ForEach(_ => iterator++);
+
+		// Assert
+		Assert.AreEqual(source.Count(), iterator);
 	}
 }

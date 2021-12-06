@@ -22,47 +22,21 @@
 // SOFTWARE.
 #endregion
 
-namespace MissingExtensions.Collections.Tests;
+namespace MissingExtensions.Collections;
 
-[TestFixture]
-public class IsNullOrEmptyTests
+public static partial class Extensions
 {
-	[Test]
-	public void Should_Be_True_When_Sequence_Is_Null()
+	/// <summary>
+	///     Invokes the action for each element in the sequence.
+	/// </summary>
+	/// <typeparam name="T">The type of the elements in the sequence.</typeparam>
+	/// <param name="source">The sequence of elements.</param>
+	/// <param name="action">The action to invoke on an element.</param>
+	public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
 	{
-		// Arrange
-		IEnumerable<object>? source = null;
-
-		// Act
-		bool result = source.IsNullOrEmpty();
-
-		// Assert
-		Assert.IsTrue(result);
-	}
-
-	[Test]
-	public void Should_Be_True_When_Sequence_Is_Empty()
-	{
-		// Arrange
-		IEnumerable<object> source = Array.Empty<object>();
-
-		// Act
-		bool result = source.IsNullOrEmpty();
-
-		// Assert
-		Assert.IsTrue(result);
-	}
-
-	[Test]
-	public void Should_Be_False_When_Sequence_Is_Not_Empty()
-	{
-		// Arrange
-		IEnumerable<object> source = new[] {"0"};
-
-		// Act
-		bool result = source.IsNullOrEmpty();
-
-		// Assert
-		Assert.IsFalse(result);
+		foreach (var element in source)
+		{
+			action(element);
+		}
 	}
 }
