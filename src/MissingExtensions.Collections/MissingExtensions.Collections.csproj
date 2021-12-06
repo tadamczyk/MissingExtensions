@@ -6,6 +6,7 @@
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
         <PackageId>MissingExtensions.Collections</PackageId>
+        <PackageIconFile>logo.png</PackageIconFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/tadamczyk/MissingExtensions</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -16,6 +17,7 @@
         <Title>MissingExtensions.Collections</Title>
     </PropertyGroup>
     <ItemGroup>
+        <None Include="..\..\assets\logo\logo.png" Pack="true" PackagePath="\"/>
         <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
         <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
