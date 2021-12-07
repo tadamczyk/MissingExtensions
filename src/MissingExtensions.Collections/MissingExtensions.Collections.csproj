@@ -2,7 +2,7 @@
     <PropertyGroup>
         <AssemblyName>MissingExtensions.Collections</AssemblyName>
         <Authors>tadamczyk</Authors>
-        <Description>MissingExtensions.Collections</Description>
+        <Description>Next set of popular and helpful C# extension methods. Project just started and it has not too many extensions yet, so feel free to add new method.</Description>
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
         <PackageId>MissingExtensions.Collections</PackageId>
@@ -10,15 +10,15 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/tadamczyk/MissingExtensions</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>MissingExtensions.Collections</PackageTags>
+        <PackageTags>MissingExtensions;ExtensionMethods;ExtensionMethod;HelperMethods;Extensions;Extension;C#;.NET</PackageTags>
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/tadamczyk/MissingExtensions</RepositoryUrl>
         <TargetFramework>Net6.0</TargetFramework>
         <Title>MissingExtensions.Collections</Title>
     </PropertyGroup>
     <ItemGroup>
-        <None Include="..\..\assets\logo\64\logo.png" Pack="true" PackagePath="\assets" />
-        <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
-        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\assets\logo\64\logo.png" Pack="true" PackagePath="\assets"/>
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 </Project>
