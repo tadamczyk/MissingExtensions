@@ -2,7 +2,7 @@
     <PropertyGroup>
         <AssemblyName>MissingExtensions.Collections</AssemblyName>
         <Authors>tadamczyk</Authors>
-        <Description>Next set of popular and helpful C# extension methods. Project just started and it has not too many extensions yet, so feel free to add new method.</Description>
+        <Description>Next set of popular and helpful C# extension methods. Project just started and it has not too many extensions yet, so feel free to add new methods.</Description>
         <ImplicitUsings>Enable</ImplicitUsings>
         <LangVersion>Latest</LangVersion>
         <PackageId>MissingExtensions.Collections</PackageId>
